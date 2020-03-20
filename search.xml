@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo-NexT Tag 插件的使用</title>
+    <url>/2020/03/21/Hexo-NexT%20Tag%20%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>参考：<a href="https://tding.top/archives/29bfe8c9.html" target="_blank" rel="noopener">来源</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>note of markdown</title>
+    <url>/2020/03/20/markdown/</url>
+    <content><![CDATA[<h2 id="markdown的用法"><a href="#markdown的用法" class="headerlink" title="markdown的用法"></a>markdown的用法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 大标题       ##次标题   ###......</span><br><span class="line"></span><br><span class="line">列表:</span><br><span class="line"> - 我是列表</span><br><span class="line"></span><br><span class="line">**粗体**  *斜体*</span><br><span class="line"></span><br><span class="line">链接加载：</span><br><span class="line">[名称]（链接地址）</span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line">图片加载：</span><br><span class="line">![名称]（图片路径）</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><img src="http://ww1.sinaimg.cn/large/005LmDpBly1gd0qxm26mwj305k05k3yu.jpg" alt="cat.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hexo博客问题</title>
+    <url>/2020/03/20/hexo/</url>
+    <content><![CDATA[<h2 id="hexo图片加载"><a href="#hexo图片加载" class="headerlink" title="hexo图片加载"></a>hexo图片加载</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">相对路径引用：</span><br><span class="line">hexo 中图片加载:</span><br><span class="line">打开_config.yml</span><br><span class="line">post_asset_folder: false（改成true）</span><br><span class="line">建一个和md文件相同的文件夹来存放图片</span><br><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br><span class="line"></span><br><span class="line">绝对路径引用：</span><br><span class="line">当Hexo项目中只用到少量图片时，可以将图片统一放在\themes\next\source\images文件夹中，通过markdown语法访问它们。</span><br><span class="line">![](&#x2F;images&#x2F;image.jpg)</span><br><span class="line">在线引用：</span><br><span class="line">用新郎图床即可</span><br><span class="line">![cat.png](http:&#x2F;&#x2F;ww1.sinaimg.cn&#x2F;large&#x2F;005LmDpBly1gd0qxm26mwj305k05k3yu.jpg)</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h2 id="首页不显示全文"><a href="#首页不显示全文" class="headerlink" title="首页不显示全文"></a>首页不显示全文</h2><p>官方回答：Use <!-- more --> in your article to break your article manually, which is recommended by Hexo.（在文章中用<!--more-->来分割）<br><img src="http://ww1.sinaimg.cn/large/005LmDpBly1gd0qxm26mwj305k05k3yu.jpg" alt="cat.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Sublime Text3</title>
+    <url>/2020/03/20/sublime/</url>
+    <content><![CDATA[<h2 id="注册码"><a href="#注册码" class="headerlink" title="注册码"></a>注册码</h2><p>来源：<a href="http://blog.sina.com.cn/s/blog_68e267e10102v76h.html" target="_blank" rel="noopener">click here</a></p>
+<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">shift</span>+Ctrl+p （<span class="string">"esc退出"</span>）//可以调用package control</span><br><span class="line">remove --移除 </span><br><span class="line">crtl+~调出sublime软件控制台命令窗口</span><br></pre></td></tr></table></figure>
+<h3 id="方式一：-直接安装"><a href="#方式一：-直接安装" class="headerlink" title="方式一： 直接安装"></a>方式一： 直接安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下载插件安装包， 然后解压到packages目录中，完成安装（菜单--》首选项-》浏览插件）</span><br></pre></td></tr></table></figure>
+<a id="more"></a>    
+<h3 id="方法二：使用package-control（插件包管理器）-组件安装"><a href="#方法二：使用package-control（插件包管理器）-组件安装" class="headerlink" title="方法二：使用package control（插件包管理器） 组件安装"></a>方法二：使用package control（插件包管理器） 组件安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">package control （一般自带）</span><br><span class="line">    方式1： 在package control的官网中找到 sublime text3 的命令，复制</span><br><span class="line">		使用Ctrl+~</span><br><span class="line">		粘贴命令</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">  方式2： shift+ctrl+p 之后install package control</span><br><span class="line">--ctrl+shift+p </span><br><span class="line">--在命令框中选中 packagecontrol ：install package 选中 按回车</span><br><span class="line">--在命令框中输入插件名称,选中插件,按回车</span><br></pre></td></tr></table></figure>
+<h2 id="相关快捷键"><a href="#相关快捷键" class="headerlink" title="相关快捷键"></a>相关快捷键</h2><h3 id="文本快捷键"><a href="#文本快捷键" class="headerlink" title="文本快捷键"></a>文本快捷键</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1 ：按住shift+ctrl然后按←或→可快速选中一行中的某一部分，相当于双击鼠标选中。</span><br><span class="line"></span><br><span class="line">当你想在代码末尾加注释的话，这个方法很好用</span><br><span class="line"></span><br><span class="line">输入文字-》光标移到文字末尾-》按住shift+ctrl+←便会选中文字-》其他操作：删除、注释（ctrl+&#x2F;）等等。</span><br><span class="line"></span><br><span class="line">2：shift+ctrl键组合+↑↓。可实现类似鼠标选中之后移动的效果。</span><br><span class="line"></span><br><span class="line">光标定位到某一行-》ctrl+shift+↑↓，上下移动一行。</span><br><span class="line"></span><br><span class="line">选中之后-》ctrl+shift+↑↓，上下移动选中区域。</span><br><span class="line"></span><br><span class="line">3：ctrl+shift+d：快速复制光标所在的一整行，并复制到该行之前。</span><br><span class="line"></span><br><span class="line">4：ctrl+shift+m：选中花括号里面的全部内容不包括&#123;&#125;。</span><br><span class="line"></span><br><span class="line">5：ctrl+shift+A：选中标签内的内容不包括标签，继续按会继续往上一层选择。</span><br><span class="line"></span><br><span class="line">可利用这个功能实时结构预览。</span><br><span class="line"></span><br><span class="line">再按</span><br><span class="line"></span><br><span class="line">6：Ctrl+Shift+Enter 光标前插入行。</span><br><span class="line"></span><br><span class="line">很好用，当因为某种原因需要插入新行的时候，使用它并且自带的缩进功能不需要使用tap键。</span><br><span class="line"></span><br><span class="line">7：Ctrl+Shift+[ 折叠代码</span><br><span class="line"></span><br><span class="line">Ctrl+Shift+] 展开代码</span><br><span class="line"></span><br><span class="line">在HTML语法格式中，可实现标签的折叠，很方便的查看标签布局结构。</span><br><span class="line"></span><br><span class="line">8：Ctrl+Shift+K  删除整行</span><br><span class="line"></span><br><span class="line">9：ctrl+shift+p  打开命令面板</span><br><span class="line"></span><br><span class="line">10:project--&gt; add project to floder</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sublime-Text快捷键："><a href="#Sublime-Text快捷键：" class="headerlink" title="Sublime Text快捷键："></a>Sublime Text快捷键：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Ctrl+Shift+P：打开命令面板</span><br><span class="line"></span><br><span class="line">Ctrl+P：搜索项目中的文件</span><br><span class="line"></span><br><span class="line">Ctrl+G：跳转到第几行</span><br><span class="line"></span><br><span class="line">Ctrl+W：关闭当前打开文件</span><br><span class="line"></span><br><span class="line">Ctrl+Shift+W：关闭所有打开文件</span><br><span class="line"></span><br><span class="line">Ctrl+Shift+V：粘贴并格式化</span><br><span class="line"></span><br><span class="line">Ctrl+D：选择单词，重复可增加选择下一个相同的单词</span><br><span class="line"></span><br><span class="line">Ctrl+L：选择行，重复可依次增加选择下一行</span><br><span class="line"></span><br><span class="line">Ctrl+Shift+L：选择多行</span><br><span class="line"></span><br><span class="line">Ctrl+Shift+Enter：在当前行前插入新行</span><br><span class="line"></span><br><span class="line">Ctrl+X：删除当前行</span><br><span class="line"></span><br><span class="line">Ctrl+M：跳转到对应括号</span><br><span class="line"></span><br><span class="line">Ctrl+U：软撤销，撤销光标位置</span><br><span class="line"></span><br><span class="line">Ctrl+J：选择标签内容</span><br><span class="line"></span><br><span class="line">Ctrl+F：查找内容</span><br><span class="line"></span><br><span class="line">Ctrl+Shift+F：查找并替换</span><br><span class="line"></span><br><span class="line">Ctrl+H：替换</span><br><span class="line"></span><br><span class="line">Ctrl+R：前往 method</span><br><span class="line"></span><br><span class="line">Ctrl+N：新建窗口</span><br><span class="line"></span><br><span class="line">Ctrl+K+B：开关侧栏</span><br><span class="line"></span><br><span class="line">Ctrl+Shift+M：选中当前括号内容，重复可选着括号本身</span><br><span class="line"></span><br><span class="line">Ctrl+F2：设置&#x2F;删除标记</span><br><span class="line"></span><br><span class="line">Ctrl+&#x2F;：注释当前行</span><br><span class="line"></span><br><span class="line">Ctrl+Shift+&#x2F;：当前位置插入注释</span><br><span class="line"></span><br><span class="line">Ctrl+Alt+&#x2F;：块注释，并Focus到首行，写注释说明用的</span><br><span class="line"></span><br><span class="line">Ctrl+Shift+A：选择当前标签前后，修改标签用的</span><br><span class="line"></span><br><span class="line">F11：全屏</span><br><span class="line"></span><br><span class="line">Shift+F11：全屏免打扰模式，只编辑当前文件</span><br><span class="line"></span><br><span class="line">Alt+F3：选择所有相同的词</span><br><span class="line"></span><br><span class="line">Alt+.：闭合标签</span><br><span class="line"></span><br><span class="line">Alt+Shift+数字：分屏显示</span><br><span class="line"></span><br><span class="line">Alt+数字：切换打开第N个文件</span><br><span class="line"></span><br><span class="line">Shift+右键拖动：光标多不，用来更改或插入列内容</span><br><span class="line"></span><br><span class="line">鼠标的前进后退键可切换Tab文件</span><br><span class="line"></span><br><span class="line">按Ctrl，依次点击或选取，可需要编辑的多个位置</span><br><span class="line"></span><br><span class="line">按Ctrl+Shift+上下键，可替换行</span><br><span class="line"></span><br><span class="line">按alt + shift + &#39;number&#39; 分屏显示 ps:要用键盘上边的数字</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/a772304419/article/details/79690297" target="_blank" rel="noopener">Orignal</a></p>
+<p><img src="http://ww1.sinaimg.cn/large/005LmDpBly1gd0qxm26mwj305k05k3yu.jpg" alt="cat.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Proxy</title>
+    <url>/2020/03/17/proxy/</url>
+    <content><![CDATA[<p>本文在于介绍对npm以及git的代理设置<br>(ps:本文用的是vmess)</p>
+<h2 id="对于NPM"><a href="#对于NPM" class="headerlink" title="对于NPM"></a>对于NPM</h2><h3 id="设置Proxy"><a href="#设置Proxy" class="headerlink" title="设置Proxy"></a>设置Proxy</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> proxy=http://127.0.0.1:10809</span><br><span class="line">npm config <span class="built_in">set</span> registry=http://registry.npmjs.org</span><br></pre></td></tr></table></figure>
+
+<h3 id="关于https"><a href="#关于https" class="headerlink" title="关于https"></a>关于https</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> https-proxy http://127.0.0.1:10809</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<h3 id="NPM代理用户名和密码"><a href="#NPM代理用户名和密码" class="headerlink" title="NPM代理用户名和密码"></a>NPM代理用户名和密码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> proxy http://username:password@server:port</span><br><span class="line">npm confit <span class="built_in">set</span> https-proxy http://username:password@server:port</span><br></pre></td></tr></table></figure>
+
+<h3 id="NPM取消代理"><a href="#NPM取消代理" class="headerlink" title="NPM取消代理"></a>NPM取消代理</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+
+<h3 id="NPM修改源"><a href="#NPM修改源" class="headerlink" title="NPM修改源"></a>NPM修改源</h3><p>More infor: <a href="https://segmentfault.com/a/1190000002589144" target="_blank" rel="noopener">修改源</a></p>
+<h2 id="对于-git"><a href="#对于-git" class="headerlink" title="对于 git"></a>对于 git</h2><h3 id="开启代理"><a href="#开启代理" class="headerlink" title="开启代理"></a>开启代理</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:10809</span><br><span class="line"></span><br><span class="line">git config --global https.proxy http://127.0.0.1:10809</span><br></pre></td></tr></table></figure>
+
+<h3 id="取消代理"><a href="#取消代理" class="headerlink" title="取消代理"></a>取消代理</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> http.proxy </span><br><span class="line"></span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/005LmDpBly1gd0qxm26mwj305k05k3yu.jpg" alt="cat.png"></p>
+]]></content>
+  </entry>
+</search>
