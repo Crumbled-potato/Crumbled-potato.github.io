@@ -10,15 +10,117 @@
       </tags>
   </entry>
   <entry>
-    <title>note of markdown</title>
+    <title>Markdown语法总结</title>
     <url>/2020/03/20/markdown/</url>
-    <content><![CDATA[<h2 id="markdown的用法"><a href="#markdown的用法" class="headerlink" title="markdown的用法"></a>markdown的用法</h2><p>1.粗体用”<em>* **” 斜体用”</em> *”<br><strong>粗体</strong>  <em>斜体</em></p>
+    <content><![CDATA[<div class="note info">
+            <p>用Sublime写Markdown语法</p>
+          </div>
+
+<p>1.粗体用”<em>* **” 斜体用”</em> *”<br><strong>粗体</strong>  <em>斜体</em></p>
 <p>2.列表:<br>3.链接加载：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[名称]（链接地址）</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+
 <p>4.图片加载：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![名称]（图片路径）</span><br></pre></td></tr></table></figure>
-<!--more-->
+<a id="more"></a>
+
+<div class="note default">
+            <p>用Typora写Markdown语法</p>
+          </div>
+<table>
+<thead>
+<tr>
+<th align="center">大标题1</th>
+<th align="center">大标题2</th>
+<th align="center">次标题3</th>
+<th align="center">次标题4</th>
+<th align="center">粗体</th>
+<th align="center">斜体</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ctrl+1</td>
+<td align="center">Ctrl+2</td>
+<td align="center">Ctrl+3</td>
+<td align="center">Ctrl+4</td>
+<td align="center">Ctrl+b</td>
+<td align="center">Ctrl+i</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">表格</th>
+<th align="center">切换成sublime模式</th>
+<th align="center">添加图片/链接</th>
+<th align="center">列表(无序)</th>
+<th align="center">代码</th>
+<th align="center">输出</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ctrl+t</td>
+<td align="center">Ctrl+/</td>
+<td align="center">直接拖动图片/链接</td>
+<td align="center">-加空格</td>
+<td align="center">```</td>
+<td align="center">file—&gt;export</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">插入数学公式</th>
+<th align="center">搜索</th>
+<th align="center">搜索并替换</th>
+<th align="center">选中一行</th>
+<th align="center">选中单词</th>
+<th align="center">选中相同格式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$$+enter</td>
+<td align="center">Ctrl+f</td>
+<td align="center">Ctrl+h</td>
+<td align="center">Ctrl+l</td>
+<td align="center">Ctrl+d</td>
+<td align="center">Ctrl+e</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>首尾跳转</th>
+<th>添加注释</th>
+<th>插入分隔线</th>
+<th>插入引用</th>
+<th>列表(有序)</th>
+<th>转义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+home/Ctrl+end</td>
+<td>[^文字]：文字</td>
+<td>— + enter</td>
+<td>&gt; + 空格</td>
+<td>数字+.+空格</td>
+<td>\ ( <em>sd</em> , <strong>init</strong>)</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">着重关键字</th>
+<th>高亮显示</th>
+<th>下划线</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Ctrl+shift+`</td>
+<td>== +字体 +==</td>
+<td>ctr + u</td>
+</tr>
+</tbody></table>
 <p><img src="http://ww1.sinaimg.cn/large/005LmDpBly1gd0qxm26mwj305k05k3yu.jpg" alt="cat.png"></p>
 ]]></content>
       <tags>
