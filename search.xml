@@ -3,7 +3,43 @@
   <entry>
     <title>CSS</title>
     <url>/2020/03/24/css/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="CSS字体样式属性"><a href="#CSS字体样式属性" class="headerlink" title="CSS字体样式属性"></a>CSS字体样式属性</h2><h3 id="Font-size"><a href="#Font-size" class="headerlink" title="Font-size"></a>Font-size</h3><p>用于设置字号</p>
+<h3 id="Font-family"><a href="#Font-family" class="headerlink" title="Font-family"></a>Font-family</h3><p>用于设置字体，常见的有宋体，微软雅黑…</p>
+<h3 id="字体字号使用技巧"><a href="#字体字号使用技巧" class="headerlink" title="字体字号使用技巧"></a>字体字号使用技巧</h3><a id="more"></a>
+
+<p>1.网页中普遍使用14px</p>
+<p>2.尽量使用偶数的字号，ie6等老式浏览器用奇数有bug</p>
+<p>3.多个字体都要用英文都好隔开</p>
+<p>4.中文字体加引号，英文一般不用</p>
+<p>5.如果英文字体有空格,$,#等符号要加引号或单引号.</p>
+<p>6.尽量使用系统默认字体</p>
+<h3 id="Css-Unicode-字体"><a href="#Css-Unicode-字体" class="headerlink" title="Css Unicode 字体"></a>Css Unicode 字体</h3><p>兼容性更好</p>
+<p>尽量写Unicode字体：宋体和微软雅黑</p>
+<h3 id="Css注释"><a href="#Css注释" class="headerlink" title="Css注释"></a>Css注释</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 注释 */</span></span><br><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">color </span>:purple <span class="comment">/* *代表选择所有的元素 */</span></span><br><span class="line">&#125;</span><br><span class="line">注释快捷键：与html相同 ctrl + shift +/</span><br></pre></td></tr></table></figure>
+
+<h3 id="Font-weight-字体加粗"><a href="#Font-weight-字体加粗" class="headerlink" title="Font-weight 字体加粗"></a>Font-weight 字体加粗</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">font-weight ： normal = 400/bold = 700/lighter/bolder/"number(100-900)"</span><br></pre></td></tr></table></figure>
+
+<h3 id="Font-style"><a href="#Font-style" class="headerlink" title="Font-style"></a>Font-style</h3><p>normal:指定字体样式为正常字体</p>
+<p>italic:指定文本样式为斜体</p>
+<h3 id="Font综合设置字体样式"><a href="#Font综合设置字体样式" class="headerlink" title="Font综合设置字体样式"></a>Font综合设置字体样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">选择器 &#123;<span class="attribute">font </span>: font-style font-size font-weight/line-height font-family;&#125;</span><br><span class="line"></span><br><span class="line">必须要按照上面的语法顺序来写 各个属性之间以空格分开,其中不需要设置的属性可以省略,但必须保留<span class="selector-tag">font-family</span>和<span class="selector-tag">font-size</span>属性，否则<span class="selector-tag">font</span>不起作用</span><br></pre></td></tr></table></figure>
+
+<h3 id="Chrome开发者工具-F12"><a href="#Chrome开发者工具-F12" class="headerlink" title="Chrome开发者工具(F12)"></a>Chrome开发者工具(F12)</h3><p>1.ctrl+滚轮可以放大缩小</p>
+<p>2.左边是html，右边是css</p>
+<p>3.右边css样式可以改变数值和颜色查看改变后的效果，光标在字号上,（按键盘上的上下键可以调大小）</p>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><h3 id="标签选择器-元素选择器"><a href="#标签选择器-元素选择器" class="headerlink" title="标签选择器(元素选择器)"></a>标签选择器(元素选择器)</h3><p>用html标签名作为选择器，按标签名进行分类，为网页中某一类标签指定统一的css样式</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">标签名 &#123;属性1：属性值1；属性2：属性2&#125; 或者</span><br><span class="line">元素名 &#123;属性1：属性值1；属性2：属性2&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最大的优点能为网页中同类标签统一样式，同时也i是其缺点，不能设计差异性样式</p>
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><p>类选择器用英文点好(.)来进行标识,后面紧跟类名</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">.类名&#123;属性1：属性值1；属性值2：属性值2&#125;</span><br><span class="line">调用的使用class="类名"，即可</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">    <span class="selector-class">.word</span> &#123;  <span class="comment">/*声明类样式*/</span></span><br><span class="line">        <span class="attribute">color</span>: orange;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">	&lt;h2 class="word"&gt;Hello&lt;/h2&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<p>优点在于可以为元素对象定义单独或相同的样式</p>
+<h4 id="Tips："><a href="#Tips：" class="headerlink" title="Tips："></a>Tips：</h4><ul>
+<li>长名词或词组可以使用中横线为选择器命名</li>
+<li>不建议使用_为选择器命名(存在兼容性问题)</li>
+<li>不要用纯数字和中文命名</li>
+</ul>
+]]></content>
       <tags>
         <tag>CSS</tag>
       </tags>
