@@ -15,7 +15,7 @@
 <p>6.尽量使用系统默认字体</p>
 <h3 id="Css-Unicode-字体"><a href="#Css-Unicode-字体" class="headerlink" title="Css Unicode 字体"></a>Css Unicode 字体</h3><p>兼容性更好</p>
 <p>尽量写Unicode字体：宋体和微软雅黑</p>
-<h3 id="Css注释"><a href="#Css注释" class="headerlink" title="Css注释"></a>Css注释</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 注释 */</span></span><br><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">color </span>:purple <span class="comment">/* *代表选择所有的元素 */</span></span><br><span class="line">&#125;</span><br><span class="line">注释快捷键：与html相同 ctrl + shift +/</span><br></pre></td></tr></table></figure>
+<h3 id="Css注释"><a href="#Css注释" class="headerlink" title="Css注释"></a>Css注释</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 注释 */</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="Font-weight-字体加粗"><a href="#Font-weight-字体加粗" class="headerlink" title="Font-weight 字体加粗"></a>Font-weight 字体加粗</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">font-weight ： normal = 400/bold = 700/lighter/bolder/"number(100-900)"</span><br></pre></td></tr></table></figure>
 
@@ -38,6 +38,31 @@
 <li>长名词或词组可以使用中横线为选择器命名</li>
 <li>不建议使用_为选择器命名(存在兼容性问题)</li>
 <li>不要用纯数字和中文命名</li>
+</ul>
+<h1 id="多类名选择器"><a href="#多类名选择器" class="headerlink" title="多类名选择器"></a>多类名选择器</h1><p>1.样式显示效果跟HTML元素中的类先后顺序没有关系，受css样式书写上下顺序有关。</p>
+<p>2.各个类名之间用空格隔开。</p>
+<h2 id="ID选择器"><a href="#ID选择器" class="headerlink" title="ID选择器"></a>ID选择器</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-id">#orange</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: orange;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;div id="orange"&gt;:)&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="id选择器和类选择器的区别"><a href="#id选择器和类选择器的区别" class="headerlink" title="id选择器和类选择器的区别"></a>id选择器和类选择器的区别</h3><p>类选择器是可以多次使用的，id选择器不可重复使用。</p>
+<h2 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">color </span>:purple</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>*指所有的标签，很少使用</p>
+<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><h3 id="链接伪类选择器"><a href="#链接伪类选择器" class="headerlink" title="链接伪类选择器"></a>链接伪类选择器</h3><p>为了向某些选择器添加特殊效果。</p>
+<ul>
+<li><p>:link  未访问的链接</p>
+</li>
+<li><p>:visited  已访问过的链接</p>
+</li>
+<li><p>:hover 鼠标移到链接上</p>
+</li>
+<li><p>:active 选定的链接，即点击但不松开鼠标，顺序不可以乱调  lvha</p>
+</li>
+</ul>
+<h3 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h3><ul>
+<li>:first-child  选取属于父元素的首个子元素的指定选择器</li>
+<li>:last-child  选取属于父元素的首个子元素的指定选择器</li>
+<li>:nth-child(n)  匹配属于父元素的N个子元素，不论元素类型，n=even 指选偶数  n=odd指选奇数  n=n指从开始选 。n还可以用公式表示（如2n 选偶数）</li>
+<li>:nth-last-child(n) 选择器匹配属于其元素的第N个子元素的每个元素，不论元素类型，从最后一个元素开始计数。 n可以是数字，关键词，公式。</li>
 </ul>
 ]]></content>
       <tags>
