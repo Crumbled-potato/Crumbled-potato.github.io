@@ -59,11 +59,51 @@
 </li>
 </ul>
 <h3 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h3><ul>
-<li>:first-child  选取属于父元素的首个子元素的指定选择器</li>
-<li>:last-child  选取属于父元素的首个子元素的指定选择器</li>
-<li>:nth-child(n)  匹配属于父元素的N个子元素，不论元素类型，n=even 指选偶数  n=odd指选奇数  n=n指从开始选 。n还可以用公式表示（如2n 选偶数）</li>
-<li>:nth-last-child(n) 选择器匹配属于其元素的第N个子元素的每个元素，不论元素类型，从最后一个元素开始计数。 n可以是数字，关键词，公式。</li>
+<li><p>:first-child  选取属于父元素的首个子元素的指定选择器</p>
+</li>
+<li><p>:last-child  选取属于父元素的首个子元素的指定选择器</p>
+</li>
+<li><p>:nth-child(n)  匹配属于父元素的N个子元素，不论元素类型，n=even 指选偶数  n=odd指选奇数  n=n指从开始选 。n还可以用公式表示（如2n 选偶数）都是从第一个数开始数。</p>
+</li>
+<li><p>:nth-last-child(n) 选择器匹配属于其元素的第N个子元素的每个元素，不论元素类型，从最后一个元素开始计数。 n可以是数字，关键词，公式。</p>
+</li>
 </ul>
+<h3 id="目标伪类选择器"><a href="#目标伪类选择器" class="headerlink" title="目标伪类选择器"></a>目标伪类选择器</h3>  <figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-pseudo">:target</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">&lt;a href="#World"&gt;World&lt;a&gt;</span><br><span class="line">&lt;h2 id="World"&gt;World&lt;/h2&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="CSS外观属性"><a href="#CSS外观属性" class="headerlink" title="CSS外观属性"></a>CSS外观属性</h2><h3 id="color：文本颜色"><a href="#color：文本颜色" class="headerlink" title="color：文本颜色"></a>color：文本颜色</h3><p>1.预定义颜色：red，green</p>
+<p>2.十六进制，如#FF0000(#F00),#FF6600(#F60),#29D794  (常用)</p>
+<p>3.RGB代码，如红色:rgb(255,0,0)或rgb(100%,0%,0%)</p>
+<p>使用rgb代码颜色百分比值，取0不可省略%。</p>
+<h3 id="line-height：行间距"><a href="#line-height：行间距" class="headerlink" title="line-height：行间距"></a>line-height：行间距</h3><p>行与行之间的距离，单位常用像素px，相对值em,百分比%。</p>
+<p>一般行间距比字号大7,8像素即可。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">25px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="text-align：水平对齐方式"><a href="#text-align：水平对齐方式" class="headerlink" title="text-align：水平对齐方式"></a>text-align：水平对齐方式</h3><p>left：左对齐(default)   right：右对齐  center：居中对齐</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="text-indent-：首行缩进"><a href="#text-indent-：首行缩进" class="headerlink" title="text-indent ：首行缩进"></a>text-indent ：首行缩进</h3><p>单位em ：1em只一个字的宽度，如果是汉字，1em就是1个汉字的宽度</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="letter-spacing：字间距"><a href="#letter-spacing：字间距" class="headerlink" title="letter-spacing：字间距"></a>letter-spacing：字间距</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">letter-spacing</span>: <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="word-spacing：单词间距（对中文无效）"><a href="#word-spacing：单词间距（对中文无效）" class="headerlink" title="word-spacing：单词间距（对中文无效）"></a>word-spacing：单词间距（对中文无效）</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">word-spacing</span>: <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="颜色半透明（CSS3）"><a href="#颜色半透明（CSS3）" class="headerlink" title="颜色半透明（CSS3）"></a>颜色半透明（CSS3）</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgba</span>(r,g,b,a) &lt;!-- a是alpha 透明的意思 取值在<span class="number">0</span>~<span class="number">1</span>之间</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-shadow</span>:水平位置(px) 垂直位置(px) 模糊距离 阴影颜色；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
 ]]></content>
       <tags>
         <tag>CSS</tag>
@@ -242,11 +282,15 @@
 <p>For example</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>City Gallery<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span></span><br><span class="line">London<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">Paris<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">Tokyo<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>London<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">London is the capital city of England. It is the most populous city in the United Kingdom,</span><br><span class="line">with a metropolitan area of over 13 million inhabitants.</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line">Copyright W3School.com.cn</span><br><span class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Html快捷方式"><a href="#Html快捷方式" class="headerlink" title="Html快捷方式"></a>Html快捷方式</h2><h4 id="Tab"><a href="#Tab" class="headerlink" title="!+Tab"></a>!+Tab</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Html快捷方式"><a href="#Html快捷方式" class="headerlink" title="Html快捷方式"></a>Html快捷方式</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">!+Tab</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="div-name-Tab-tabel-name-Tab-…"><a href="#div-name-Tab-tabel-name-Tab-…" class="headerlink" title="div#name  + Tab/tabel#name +Tab/…."></a>div#name  + Tab/tabel#name +Tab/….</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tabel</span> <span class="attr">id</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;/<span class="name">tabel</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">div#name+Tab</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">table.name+Tab</span><br><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;/<span class="name">tabel</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">ul&gt;li (父子关系)</span><br><span class="line">div+p (兄弟关系)</span><br><span class="line"></span><br><span class="line">.nav+.header+.main&gt;.left+.right +Tab</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"nav"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
