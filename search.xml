@@ -56,6 +56,10 @@
 <li><p>:hover 鼠标移到链接上</p>
 </li>
 <li><p>:active 选定的链接，即点击但不松开鼠标，顺序不可以乱调  lvha</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">两种写法：</span><br><span class="line">1: <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span></span><br><span class="line">2: .类名：<span class="selector-tag">hover</span> <span class="comment">/* &lt;a href="#" class="类名" */</span></span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
 <h3 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h3><ul>
@@ -81,7 +85,7 @@
 
 
 <h3 id="text-align：水平对齐方式"><a href="#text-align：水平对齐方式" class="headerlink" title="text-align：水平对齐方式"></a>text-align：水平对齐方式</h3><p>left：左对齐(default)   right：右对齐  center：居中对齐</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">tac</span>+<span class="selector-tag">Tab</span></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -96,9 +100,42 @@
 
 <h2 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">text-shadow</span>:水平位置(px) 垂直位置(px) 模糊距离 阴影颜色；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="引入CSS样式表（书写位置）"><a href="#引入CSS样式表（书写位置）" class="headerlink" title="引入CSS样式表（书写位置）"></a>引入CSS样式表（书写位置）</h2><h3 id="行内式（内嵌式）"><a href="#行内式（内嵌式）" class="headerlink" title="行内式（内嵌式）"></a>行内式（内嵌式）</h3><p>通过标签的style属性来设置元素的样式</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;标签名 style="属性1: 属性值1; 属性2: 属性值2; "&gt;内容&lt;/标签名&gt;</span><br></pre></td></tr></table></figure>
 
+<h3 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h3><p>内嵌式是将CSS代码集中写在html文档的head头部标签里，并用style标签定义</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;style type="text/css"&gt;  /*  type 类型 css 文本 */</span><br></pre></td></tr></table></figure>
 
+<h3 id="外部样式表（外链式）"><a href="#外部样式表（外链式）" class="headerlink" title="外部样式表（外链式）"></a>外部样式表（外链式）</h3><p>指将所有的样式放在一个或多个一.css为扩展名的外部样式表文件中</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* link是单标签 */</span></span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">&lt;link rel="stylesheet" type="text/css" href="CSS文件路径"&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
 
+<h2 id="标签显示模式"><a href="#标签显示模式" class="headerlink" title="标签显示模式"></a>标签显示模式</h2><h3 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h3><p>每个元素通常都会独自占据一整行或多整行，可以对其设置宽度，高度，对齐等属性</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">常见的块级元素:&lt;<span class="selector-tag">h1</span>&gt;~&lt;<span class="selector-tag">h6</span>&gt; &lt;<span class="selector-tag">div</span>&gt; &lt;<span class="selector-tag">p</span>&gt; &lt;<span class="selector-tag">ul</span>&gt; &lt;<span class="selector-tag">ol</span>&gt; &lt;<span class="selector-tag">li</span>&gt;</span><br><span class="line">如</span><br><span class="line"><span class="comment">/*Tips: h100+tab --&gt; heoght:100px</span></span><br><span class="line"><span class="comment">bgc + Tab --&gt; background-color*/</span></span><br><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<p>1.总是从新行开始</p>
+<p>2.宽度，行高，边距以及内边距都可以控制</p>
+<p>3.宽度默认是容器的100%</p>
+<p>4.可以容纳内敛元素和其他块元素。</p>
+<h3 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h3><p>行内元素（内联元素）不占单独的区域，仅仅靠自身的字体大小和图像尺寸来支撑结构，一般不可以设置宽度，高度，对齐等属性，常用于控制页面文本的样式</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">常见的行内元素:&lt;<span class="selector-tag">a</span>&gt; &lt;<span class="selector-tag">strong</span>&gt; &lt;<span class="selector-tag">b</span>&gt; &lt;<span class="selector-tag">em</span>&gt; &lt;<span class="selector-tag">i</span>&gt; &lt;<span class="selector-tag">del</span>&gt; &lt;<span class="selector-tag">s</span>&gt; &lt;<span class="selector-tag">ins</span>&gt; &lt;<span class="selector-tag">u</span>&gt; &lt;<span class="selector-tag">span</span>&gt;,其中&lt;<span class="selector-tag">span</span>&gt;是最典型的行内元素。</span><br></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<p>1.和相邻的行内元素在一行上显示</p>
+<p>2.宽，高是无效的 但水平方向上的padding值和margin可以设置，垂直方向无效</p>
+<p>3.默认宽度是其内容宽度</p>
+<p>4.行内元素只能容纳文本或其他行内元素（a特殊）</p>
+<p>注意：</p>
+<p>1.只有文字才能组成段落 因此p里面不能放块级元素，同理还有h1~h6,dt,都是文字块级标签，里面不可以放块级元素</p>
+<p>2.链接里不可以放链接。</p>
+<h3 id="行内块元素（inline-block）"><a href="#行内块元素（inline-block）" class="headerlink" title="行内块元素（inline-block）"></a>行内块元素（inline-block）</h3><p>在行内元素中有几个特殊的标签，可以对其设置宽度和对齐属性</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;img /&gt; &lt;input /&gt; &lt;td&gt;</span><br></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<p>1.和相邻行内元素（行内块）在一行上，但是之间会有空白间隙</p>
+<p>2.某人宽度就是本身内容的宽度</p>
+<p>3.宽度，行高，边距以及内边距都可以控制</p>
+<h3 id="标签模式转换-display"><a href="#标签模式转换-display" class="headerlink" title="标签模式转换 display"></a>标签模式转换 display</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">块转行内: <span class="selector-tag">display</span><span class="selector-pseudo">:inline</span></span><br><span class="line">行内转块：<span class="selector-tag">display</span><span class="selector-pseudo">:block</span></span><br><span class="line">块，行内元素转换为行内块: <span class="selector-tag">display</span><span class="selector-pseudo">:inline-block</span></span><br></pre></td></tr></table></figure>
 
 
 
