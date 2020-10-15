@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Data_Struct</title>
+    <url>/2020/10/15/Data-Struct/</url>
+    <content><![CDATA[<h2 id="数据结构中链表的一些基本操作如下"><a href="#数据结构中链表的一些基本操作如下" class="headerlink" title="数据结构中链表的一些基本操作如下:"></a>数据结构中链表的一些基本操作如下:</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> elemtype;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    elemtype data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125; Node ,*LinkList;</span><br><span class="line"></span><br><span class="line"> <span class="function">LinkList <span class="title">createnode</span><span class="params">(elemtype data)</span></span></span><br><span class="line"><span class="function"> </span>&#123;</span><br><span class="line">     Node* newnode = (LinkList) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node));</span><br><span class="line">     newnode-&gt;data = data;</span><br><span class="line">     newnode-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">     <span class="keyword">return</span> newnode;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">out</span><span class="params">(LinkList L)</span> <span class="comment">//正序--从前往后(会把头结点遍历出来)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(L)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, L-&gt;data);</span><br><span class="line">        out(L-&gt;next);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">taileinsert</span><span class="params">(LinkList linknode,  LinkList newnode)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkList p=linknode;</span><br><span class="line">    <span class="keyword">while</span>(p-&gt;next)</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    p-&gt;next = newnode;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">headinsert</span><span class="params">(LinkList linknode, LinkList newnode)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    newnode-&gt;next=linknode-&gt;next;</span><br><span class="line">    linknode-&gt;next=newnode;</span><br><span class="line">&#125;</span><br><span class="line">  <span class="function">LinkList <span class="title">createlist</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> data;</span><br><span class="line">        LinkList newnode;</span><br><span class="line">        LinkList L =  (LinkList )<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node));</span><br><span class="line">        <span class="keyword">if</span>(L==<span class="literal">NULL</span>) &#123;<span class="built_in">printf</span>(<span class="string">"NO SPACE"</span>); <span class="keyword">return</span> <span class="literal">NULL</span>;&#125;</span><br><span class="line">        L-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;data)!=EOF&amp;&amp;data)</span><br><span class="line">        &#123;</span><br><span class="line">            newnode = createnode(data);</span><br><span class="line">            taileinsert(L,newnode);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> L;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Reverse</span><span class="params">(LinkList &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkList p,t;</span><br><span class="line">    p=L-&gt;next;</span><br><span class="line">    L-&gt;next=<span class="literal">NULL</span>;<span class="comment">//建立空表</span></span><br><span class="line">    <span class="keyword">while</span>(p)</span><br><span class="line">        &#123;   t=p; <span class="comment">//要用t来保存p，如果直接用p会会使后边的链表丢失</span></span><br><span class="line">            p=p-&gt;next;</span><br><span class="line">            headinsert(L, t);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>-Data_Struct</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS</title>
     <url>/2020/03/24/css/</url>
     <content><![CDATA[<h2 id="CSS字体样式属性"><a href="#CSS字体样式属性" class="headerlink" title="CSS字体样式属性"></a>CSS字体样式属性</h2><h3 id="Font-size"><a href="#Font-size" class="headerlink" title="Font-size"></a>Font-size</h3><p>用于设置字号</p>
@@ -137,11 +147,23 @@
 <p>3.宽度，行高，边距以及内边距都可以控制</p>
 <h3 id="标签模式转换-display"><a href="#标签模式转换-display" class="headerlink" title="标签模式转换 display"></a>标签模式转换 display</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">块转行内: <span class="selector-tag">display</span><span class="selector-pseudo">:inline</span></span><br><span class="line">行内转块：<span class="selector-tag">display</span><span class="selector-pseudo">:block</span></span><br><span class="line">块，行内元素转换为行内块: <span class="selector-tag">display</span><span class="selector-pseudo">:inline-block</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h2><h3 id="交集选择器"><a href="#交集选择器" class="headerlink" title="交集选择器"></a>交集选择器</h3><p>交集选择器有两个选择器组成，用.连接，第一个是标签选择器，第二个是class选择器（或id选择器—不推荐），两个选择器之间不能有空格。 如p.special</p>
+<p>Tips：</p>
+<p>交集选择器是并且的意思</p>
+<p>用的相对较少</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-class">.special</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
+<h3 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h3><p>并集选择器（css选择器分组）是各个选择器通过逗号连接而成的，任何形式的选择器（包括标签选择器，class选择器，id选择器等），都可以作为并集选择器的一部分。</p>
+<p>Tips：</p>
+<p>并集选择器的意思是：只要逗号隔开的所有选择器都会执行后面的样式</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span>,<span class="selector-tag">div</span>,<span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>:blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-]]></content>
+<h3 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h3><p>后代选择器又称包含选择器，用来选择元素或元素组的后代，其写法就是把外层标签写在前边，内层标签写在后边，中间用空格分隔。当标签发生嵌套时，内层标签成为外层标签的后代。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">    <span class="selector-tag">div</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>:blue;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h3>]]></content>
       <tags>
         <tag>CSS</tag>
       </tags>
@@ -453,7 +475,6 @@
 <td>ctr + u</td>
 </tr>
 </tbody></table>
-<p><img src="http://ww1.sinaimg.cn/large/005LmDpBly1gd0qxm26mwj305k05k3yu.jpg" alt="cat.png"></p>
 ]]></content>
       <tags>
         <tag>markdown</tag>
@@ -472,7 +493,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![cat.png](http:&#x2F;&#x2F;ww1.sinaimg.cn&#x2F;large&#x2F;005LmDpBly1gd0qxm26mwj305k05k3yu.jpg)</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="首页不显示全文"><a href="#首页不显示全文" class="headerlink" title="首页不显示全文"></a>首页不显示全文</h2><p>官方回答：Use <!-- more --> in your article to break your article manually, which is recommended by Hexo.（在文章中用<!--more-->来分割）<br><img src="http://ww1.sinaimg.cn/large/005LmDpBly1gd0qxm26mwj305k05k3yu.jpg" alt="cat.png"></p>
+<h2 id="首页不显示全文"><a href="#首页不显示全文" class="headerlink" title="首页不显示全文"></a>首页不显示全文</h2><p>官方回答：Use <!-- more --> in your article to break your article manually, which is recommended by Hexo.（在文章中用<!--more-->来分割）</p>
 ]]></content>
       <tags>
         <tag>Hexo</tag>
@@ -544,7 +565,6 @@
 <p>按Ctrl+Shift+上下键，可替换行</p>
 <p>按alt + shift + ‘number’ 分屏显示 ps:要用键盘上边的数字</p>
 <p><a href="https://blog.csdn.net/a772304419/article/details/79690297" target="_blank" rel="noopener">Orignal</a></p>
-<p><img src="http://ww1.sinaimg.cn/large/005LmDpBly1gd0qxm26mwj305k05k3yu.jpg" alt="cat.png"></p>
 ]]></content>
       <tags>
         <tag>Sublime</tag>
@@ -553,7 +573,7 @@
   <entry>
     <title>Proxy</title>
     <url>/2020/03/17/proxy/</url>
-    <content><![CDATA[<p>本文在于介绍对npm以及git的代理设置<br>(ps:本文用的是vmess)</p>
+    <content><![CDATA[<p>本文在于介绍对npm以及git的代理设置</p>
 <h2 id="对于NPM"><a href="#对于NPM" class="headerlink" title="对于NPM"></a>对于NPM</h2><h3 id="设置Proxy"><a href="#设置Proxy" class="headerlink" title="设置Proxy"></a>设置Proxy</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> proxy=http://127.0.0.1:10809</span><br><span class="line">npm config <span class="built_in">set</span> registry=http://registry.npmjs.org</span><br></pre></td></tr></table></figure>
 
 <h3 id="关于https"><a href="#关于https" class="headerlink" title="关于https"></a>关于https</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> https-proxy http://127.0.0.1:10809</span><br></pre></td></tr></table></figure>
@@ -567,7 +587,6 @@
 <h2 id="对于-git"><a href="#对于-git" class="headerlink" title="对于 git"></a>对于 git</h2><h3 id="开启代理"><a href="#开启代理" class="headerlink" title="开启代理"></a>开启代理</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:10809</span><br><span class="line"></span><br><span class="line">git config --global https.proxy http://127.0.0.1:10809</span><br></pre></td></tr></table></figure>
 
 <h3 id="取消代理"><a href="#取消代理" class="headerlink" title="取消代理"></a>取消代理</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> http.proxy </span><br><span class="line"></span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
-<p><img src="http://ww1.sinaimg.cn/large/005LmDpBly1gd0qxm26mwj305k05k3yu.jpg" alt="cat.png"></p>
 ]]></content>
       <tags>
         <tag>Git</tag>
